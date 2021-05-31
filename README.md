@@ -3,7 +3,7 @@ Attempting to implement and improve upon Spotify features/functionality
 
 ### [Live Site](https://lambify-clone.netlify.app/)
 
-[![lambify.gif]](https://media.giphy.com/media/xLveavR9EPcYjqi4pz/giphy.gif)
+<img src="https://media.giphy.com/media/xLveavR9EPcYjqi4pz/giphy.gif" width="40" height="40" />
 
 ## Introduction
 This was a challenge to see if I could implement Spotify authentication as well as a lyrics look up to improve upon the basic features already included with the Spotify Web Player.
