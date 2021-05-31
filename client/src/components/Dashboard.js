@@ -17,6 +17,7 @@ export default function Dashboard({ code }) {
     const [searchResults, setSearchResults] = useState([])
     const [selectedTrack, setSelectedTrack] = useState()
     const [lyrics, setLyrics] = useState('')
+    const URL = 'https://lambify.herokuapp.com'
 
     const chooseTrack = (track) => {
         setSelectedTrack(track)
@@ -27,7 +28,7 @@ export default function Dashboard({ code }) {
     useEffect(() => {
         if (!selectedTrack) return
 
-        axios.get('https://lambify.herokuapp.com/lyrics', {
+        axios.get(`${ URL }/lyrics`, {
             params: {
                 track: selectedTrack.title,
                 artist: selectedTrack.artist

@@ -5,9 +5,10 @@ export default function useAuth(code) {
     const [accessToken, setAccessToken] = useState()
     const [refreshToken, setRefreshToken] = useState()
     const [expiresIn, setExpiresIn] = useState()
+    const URL = "https://lambify.herokuapp.com"
 
     useEffect(() => {
-        axios.post('https://lambify.herokuapp.com/login', {
+        axios.post(`${ URL }/login`, {
             code
         })
             .then(res => {
@@ -27,7 +28,7 @@ export default function useAuth(code) {
         if (!refreshToken || !expiresIn) return
         const interval = setInterval(() => {
             axios
-                .post("https://lambify.herokuapp.com/refresh", {
+                .post(`${ URL }/refresh`, {
                     refreshToken,
                 })
                 .then(res => {
